@@ -3,6 +3,8 @@ import { Twitter, Facebook } from 'react-feather';
 import styled from 'styled-components/macro';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 
+import { QUERIES } from '../../constants';
+
 import VisuallyHidden from '../VisuallyHidden';
 
 const Footer = () => {
@@ -170,6 +172,13 @@ const MainNavArea = styled.div`
   gap: 32px;
   padding: 32px 0 48px;
   text-align: center;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: grid;
+    gap: 32px 64px;
+    grid-template-columns: repeat(auto-fill, minmax(193px, 1fr));
+    text-align: revert;
+  }
 `;
 
 const MainNavHeading = styled.h2`
